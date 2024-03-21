@@ -9,7 +9,7 @@ load_dotenv()
 # Configure Streamlit page settings
 st.set_page_config(
     page_title="AgriMate Chatbot",
-    page_icon=":alien:",  # Favicon emoji
+    page_icon="🌾",  # Favicon emoji
     layout="centered",  # Page layout option
 )
 
