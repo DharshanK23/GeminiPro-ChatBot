@@ -15,17 +15,13 @@ st.set_page_config(
 
 # Sidebar to input Google API Key
 st.sidebar.title("AgriMate")
-GOOGLE_API_KEY = st.sidebar.text_input("Enter your Google API Key", type="password")
+GOOGLE_API_KEY = st.sidebar.text_input("AIzaSyCLh2tDuyTHNYgXEQLG5kQOEOvNj3sp-rA", type="password")
 
 # Guide for obtaining Google API Key if not available
 st.sidebar.subheader("Don't have a Google API Key?")
 st.sidebar.write("Visit [Google Makersuite](https://makersuite.google.com/app/apikey) and log in with your Google account. Then click on 'Create API Key'.")
 
 
-# Check if API key is provided
-if not GOOGLE_API_KEY:
-    st.error("Please enter your Google API Key.")
-    st.stop()
 
 # Set up Google Gemini-Pro AI model
 gen_ai.configure(api_key=GOOGLE_API_KEY)
