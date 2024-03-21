@@ -8,7 +8,7 @@ load_dotenv()
 
 # Configure Streamlit page settings
 st.set_page_config(
-    page_title="Agri-Bot",
+    page_title="AgriMate-Bot",
     page_icon="🌾",  # Favicon emoji for agriculture
     layout="centered",  # Page layout option
 )
@@ -42,10 +42,8 @@ if "chat_session" not in st.session_state:
     st.session_state.chat_session = model.start_chat(history=[])
 
 # Display the chatbot's title on the page
-st.title("🌾 Agriculture Chatbot")
+st.title("🌾 AgriMate Chatbot")
 
-# Add small text below the header
-st.markdown("Made by 😎 [Hardik](https://www.linkedin.com/in/hardikjp/)")
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
@@ -53,7 +51,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
 
 # Input field for user's message
-user_prompt = st.chat_input("Ask Agriculture-Pro...")
+user_prompt = st.chat_input("Ask AgriMate Bot...")
 if user_prompt:
     # Add user's message to chat and display it
     st.chat_message("user").markdown(user_prompt)
