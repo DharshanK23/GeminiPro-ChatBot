@@ -13,18 +13,9 @@ st.set_page_config(
     layout="centered",  # Page layout option
 )
 
-# Sidebar to input Google API Key
-st.sidebar.title("AgriMate")
-GOOGLE_API_KEY = st.sidebar.text_input("AIzaSyCLh2tDuyTHNYgXEQLG5kQOEOvNj3sp-rA", type="password")
-
-# Guide for obtaining Google API Key if not available
-st.sidebar.subheader("Don't have a Google API Key?")
-st.sidebar.write("Visit [Google Makersuite](https://makersuite.google.com/app/apikey) and log in with your Google account. Then click on 'Create API Key'.")
-
-
 
 # Set up Google Gemini-Pro AI model
-gen_ai.configure(api_key=GOOGLE_API_KEY)
+gen_ai.configure(api_key="AIzaSyCLh2tDuyTHNYgXEQLG5kQOEOvNj3sp-rA")
 model = gen_ai.GenerativeModel('gemini-1.0-pro')
 
 # Function to translate roles between Gemini-Pro and Streamlit terminology
